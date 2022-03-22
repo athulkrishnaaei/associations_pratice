@@ -15,10 +15,12 @@ defmodule StudyWeb.Router do
   end
 
   scope "/", StudyWeb do
-    pipe_through :browser
+    pipe_through :api
     resources "/users", UserController, except: [:new, :edit]
     get "/", PageController, :index
     get "/posts", PostController, :index
+    post "/createpost",PostController,:create
+    post "/createuser",UserController,:create
   end
 
   # Other scopes may use custom stacks.

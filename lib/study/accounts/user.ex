@@ -5,7 +5,7 @@ defmodule Study.Accounts.User do
   schema "users" do
     field :age, :integer
     field :name, :string
-
+    has_many :posts, Study.Accounts.Post
     timestamps()
   end
 

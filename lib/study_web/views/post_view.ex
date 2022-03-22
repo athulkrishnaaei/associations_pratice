@@ -12,7 +12,11 @@ defmodule StudyWeb.PostView do
 
   def render("post.json", %{post: post}) do
     %{
-      post: post.post
+
+    post: post.name
+
+      #  Map.take(post, [:id])
+
     }
 
   end
